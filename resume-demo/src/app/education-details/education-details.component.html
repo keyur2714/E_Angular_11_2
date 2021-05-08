@@ -1,0 +1,36 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Digree</th>
+            <th>University</th>
+            <th>Percentage</th>
+            <th>Year Of Passing</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr>
+            <td>{{educations[0].digree}}</td>
+            <td>{{educations[0].university}}</td>
+            <td>{{educations[0].percentage}}</td>
+            <td>{{educations[0].yearOfPassing}}</td>
+        </tr>
+        <tr>
+            <td>{{educations[1].digree}}</td>
+            <td>{{educations[1].university}}</td>
+            <td>{{educations[1].percentage}}</td>
+            <td>{{educations[1].yearOfPassing}}</td>
+        </tr>
+        <tr>
+            <td>{{educations[2].digree}}</td>
+            <td>{{educations[2].university}}</td>
+            <td>{{educations[2].percentage}}</td>
+            <td>{{educations[2].yearOfPassing}}</td>
+        </tr> -->
+        <tr *ngFor="let eductsion of educations">
+            <td>{{eductsion.digree}}</td>
+            <td>{{eductsion.university}}</td>
+            <td>{{eductsion.percentage}}</td>
+            <td>{{eductsion.yearOfPassing}}</td>
+        </tr>
+    </tbody>
+</table>
