@@ -1,0 +1,60 @@
+<div class="container">  
+  <div class="row form-group">
+    <div class="col">
+      <h1>{{title}}</h1>
+    </div>
+    <div class="col">
+      <app-message *ngFor="let msg of messageList">
+        {{msg}}
+      </app-message>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col">
+      Name : 
+    </div>
+    <div class="col">
+      <input type="text" name=name [(ngModel)]="user.name" class="form-control">
+    </div>    
+    <div class="col">
+      Input Name Value Is : {{user.name}}
+    </div>
+  </div>  
+  <div class="row form-group">
+    <div class="col">
+      Age : 
+    </div>
+    <div class="col">
+      <input type="text" name=age [(ngModel)]="user.age" class="form-control">
+    </div>    
+    <div class="col">
+      Input Age Value Is : {{user.age}}
+    </div>
+  </div>  
+  <div class="row form-group">
+    <div class="col">
+      <button class="btn btn-info" (click)=reverse()>Reverse Name</button>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col">
+      Reverse Name is : {{revName}}
+    </div>
+  </div>
+  <div class="row form-group" *ngIf="user.age>=18 then allowForVote;else notAllowForVote">      
+  </div>    
+  <ng-template #allowForVote>
+    <div class="row form-group">
+      <div class="col">
+        {{user.name}} is allow to Vote in India.
+      </div>
+    </div>
+  </ng-template>  
+  <ng-template #notAllowForVote>
+    <div class="row form-group">
+      <div class="col">
+        {{user.name}} is not allow to Vote in India.
+      </div>
+    </div>
+  </ng-template>
+</div>
