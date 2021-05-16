@@ -1,0 +1,27 @@
+<!-- <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Emp Id</th>
+            <th>Name</th>
+            <th>Date Of Join</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employeeList">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.doj | date : 'yyyy/MMM/dd'}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+<app-data-table
+    [dataList]="employeeList"
+    [headerList]="headerList"
+    [fieldList]="fieldList"
+    [text-color]="'warning'"
+    backgroud-color="dark"
+>
+</app-data-table>
